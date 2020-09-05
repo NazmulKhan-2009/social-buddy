@@ -7,7 +7,8 @@ import Userdata from '../Userdata/Userdata';
 const DetailsInfo = () => {
   const {userId }=useParams()
   const [post, setPost]=useState([])
-  const [text,setText]=useState("Click for Comment")
+  
+  
   console.log( post)
 
   const [comments, setComments]=useState([])
@@ -34,11 +35,13 @@ const DetailsInfo = () => {
   const imageData=Userdata
   console.log(imageData.img,imageData.id );
 
+  
+
   return (
     <div>
     {/* <h4>{post.title}</h4>
     <h5>{post.body}</h5> */}
-    <Details data={post} text={text} />
+    <Details data={post}/>
     
     {
       comments.map(info=><Comments info={info} img={imageData} />)

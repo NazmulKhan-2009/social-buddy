@@ -50,13 +50,13 @@ const Details = ({data,text}) => {
         </Typography>
         <Typography variant="body2" component="p">
         {data.body}
-          <br />
-          {'"a benevolent smile"'}
+         
+          
         </Typography>
       </CardContent>
       <CardActions>
       <div style={{margin: 'auto'}}>
-
+          {/* *********** bellow text dynamically passed ******* */}
       <a href={`detailsinfo/${data.id}`}><Button  size="small">{text}</Button> </a>  
       
       </div>

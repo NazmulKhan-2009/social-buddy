@@ -27,17 +27,18 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 
 const Comments = (props) => {
-  const rand=Math.floor( Math.random()* Math.floor(30));
+  const rand=Math.floor( Math.random()* Math.floor(50));
   console.log( rand)
   console.log( props.info.email)
   return (
     
 
-<Grid container spacing={0} style={{padding:"3px"}}>
+<Grid container spacing={0} style={{padding:"3px",}}>
 
   <Grid  xs={6} style={{margin:"auto",display: "flex",border:"2px solid lightgray"}}>
   <Grid  xs={2} >
-  <img style={{width:"60px",borderRadius:"50px",padding:"15px"}} src={props.img[rand].img} alt="" />
+  {/* <img style={{width:"60px",borderRadius:"50px",padding:"15px"}} src={props.img[rand].img} alt="" /> */}
+  <img style={{width:"60px",borderRadius:"50px",padding:"15px"}} src={`https://randomuser.me/api/portraits/men/${rand}.jpg`} alt="" />
   </Grid>
 
   <Grid  xs={10} style={{textAlign:"center"}}>
