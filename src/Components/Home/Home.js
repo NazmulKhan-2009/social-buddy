@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 
 const Home = () => {
   const [post, setPost]=useState([])
+  const [text,setText]=useState("Know Details")
 console.log( post)
   useEffect(()=>{
     const url="https://jsonplaceholder.typicode.com/posts";
@@ -18,7 +19,7 @@ console.log( post)
       
         <Grid item xs={10} style={{margin:"auto"}}>
       {
-        post.map(data=><Details data={data}/>)
+        post.map(data=><Details data={data} text={text}/>)
       }
       </Grid>
       </Grid>

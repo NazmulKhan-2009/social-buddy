@@ -34,6 +34,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    
   },
   paper: {
     padding: theme.spacing(0),
@@ -68,7 +69,7 @@ const Header = () => {
 
 
 <div className={classes.root}>
-  <Grid container spacing={0}>
+  <Grid container spacing={5}>
 
   <Grid item xs={11}>
           <Paper className={classes.paper}>

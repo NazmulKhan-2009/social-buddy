@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     
   },
 });
-const Details = ({data}) => {
+const Details = ({data,text}) => {
   const classes = useStyles();
   // const bull = <span className={classes.bullet}>•</span>;
 
@@ -56,7 +56,9 @@ const Details = ({data}) => {
       </CardContent>
       <CardActions>
       <div style={{margin: 'auto'}}>
-      <a href={`detailsinfo/${data.id}`}><Button  size="small">Learn More</Button> </a> 
+
+      <a href={`detailsinfo/${data.id}`}><Button  size="small">{text}</Button> </a>  
+      
       </div>
         
       </CardActions>
