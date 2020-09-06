@@ -6,10 +6,10 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Components/Home/Home';
-import Details from './Components/Details/Details';
-import OthersCom from './Components/OtherCom/OthersCom';
+
 import Header from './Components/Header/Header';
 import DetailsInfo from './Components/DetailsInfo/DetailsInfo';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,18 +20,10 @@ function App() {
 
           <Route path="/home">
             <Home/>
-          </Route>
-
-          <Route path="/details">
-            <Details/>
-          </Route>
+          </Route>         
 
           <Route path="/detailsinfo/:userId">
             <DetailsInfo/>
-          </Route>
-
-          <Route path="/others">
-            <OthersCom/>
           </Route>
 
           <Route exact path="/">
@@ -39,7 +31,7 @@ function App() {
           </Route>
 
           <Route path="*">
-            <h1 style={{color:"red",textAlign:"center"}}>404- NOT FOUND</h1>
+            <NotFound/>
           </Route>
 
         </Switch>

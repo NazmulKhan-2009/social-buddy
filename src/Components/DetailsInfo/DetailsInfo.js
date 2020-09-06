@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Details from '../Details/Details';
 import Comments from '../Comments/Comments';
-import Userdata from '../Userdata/Userdata';
+
 
 const DetailsInfo = () => {
   const {userId }=useParams()
@@ -31,20 +31,21 @@ const DetailsInfo = () => {
 
   },[userId])
 
-  const imageData=Userdata
-  console.log(imageData.img,imageData.id );
+  
 
   
 
   return (
     <div>
-   
-      <Details data={post}/>
+    
+    <Details data={post}/>
+    
+    {
+      comments.map(info=><Comments info={info}  />)
+    }  
+    
+
       
-      {
-        comments.map(info=><Comments info={info} img={imageData} />)
-      }  
-        
     </div>
   );
 };

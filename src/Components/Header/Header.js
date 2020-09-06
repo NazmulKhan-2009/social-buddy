@@ -56,12 +56,9 @@ const Header = () => {
           
           <Typography variant="h6" className={classes.title}>
             SOCIAL BUDDY
-          </Typography>
-          
+          </Typography>        
          
-          <Link className={classes.link} href="/home"><Button variant="contained"  color="inherit" ><HomeIcon className={classes.homeIcon} color="secondary" />Home</Button></Link>
-          <Button color="inherit">Comments</Button>
-          <Button color="inherit">Login</Button>
+          <Link className={classes.link} href="/home"><Button variant="contained"  color="inherit" ><HomeIcon className={classes.homeIcon} color="secondary" />Home</Button></Link>  
 
         </Toolbar>
       </AppBar>
