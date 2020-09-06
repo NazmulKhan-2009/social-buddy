@@ -8,12 +8,11 @@ const DetailsInfo = () => {
   const {userId }=useParams()
   const [post, setPost]=useState([])
   
-  
-  console.log( post)
+  // console.log( post)
 
   const [comments, setComments]=useState([])
   console.log( comments)
-  // const [comment, setComment]=useState([])
+  
   console.log( post)
   useEffect(()=>{
     const url=`https://jsonplaceholder.typicode.com/posts/${userId}`
@@ -39,18 +38,13 @@ const DetailsInfo = () => {
 
   return (
     <div>
-    {/* <h4>{post.title}</h4>
-    <h5>{post.body}</h5> */}
-    <Details data={post}/>
-    
-    {
-      comments.map(info=><Comments info={info} img={imageData} />)
-    }  
-    {/* {
-      imageData.map(userImg=><Comments img={userImg.img}/>)
-    } */}
-
+   
+      <Details data={post}/>
       
+      {
+        comments.map(info=><Comments info={info} img={imageData} />)
+      }  
+        
     </div>
   );
 };

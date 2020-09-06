@@ -6,12 +6,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { Link } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
   root: {
     minWidth:'275',
-    
+    border:"2px solid lightgray",
+    boxShadow:"5px 5px 10px lightgray",
     
   },
   bullet: {
@@ -24,47 +25,35 @@ const useStyles = makeStyles({
   },
   pos: {
     marginBottom: 2,
+    color:"black"
     
   },
 });
-const Details = ({data,text}) => {
+const Details = ({data,button}) => {
   const classes = useStyles();
-  // const bull = <span className={classes.bullet}>•</span>;
-
 
   return (
     <Grid container spacing={2}>
+      <Grid item xs={10} style={{margin:"auto"}}>
+        <Card className={classes.root}>
 
-  <Grid item xs={10} style={{margin:"auto"}}>
+          <CardContent>           
+            <Typography variant="h6" component="" className={classes.pos} color="textSecondary">
+              {data.title}
+              </Typography>
+              <Typography  variant="p" component="p">
+              {data.body}             
+            </Typography>
+          </CardContent>
 
-    <Card className={classes.root}>
-      <CardContent>
-        {/* <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography> */}
-        <Typography className={classes.pos} color="textSecondary">
-        {data.title}
-        </Typography>
-        <Typography variant="body2" component="p">
-        {data.body}
-         
+          <CardActions>
+            <div style={{margin: 'auto'}}>                
+                {button && <a style={{textDecoration:"none"}} href={`detailsinfo/${data.id}`}><Button variant="contained" color="secondary" size="small">Know Details</Button> </a>   }
+            </div>             
+          </CardActions>
           
-        </Typography>
-      </CardContent>
-      <CardActions>
-      <div style={{margin: 'auto'}}>
-          {/* *********** bellow text dynamically passed ******* */}
-      <a href={`detailsinfo/${data.id}`}><Button  size="small">{text}</Button> </a>  
-      
-      </div>
-        
-      </CardActions>
-    </Card>
-
-    </Grid>
+        </Card>
+      </Grid>
     </Grid>
   );
 };
