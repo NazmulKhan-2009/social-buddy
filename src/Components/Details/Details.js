@@ -30,6 +30,7 @@ const useStyles = makeStyles({
   },
 });
 const Details = ({data,button}) => {
+  const {title,body}=data
   const classes = useStyles();
 
   return (
@@ -39,10 +40,10 @@ const Details = ({data,button}) => {
 
           <CardContent>           
             <Typography variant="h6" component="" className={classes.pos} color="textSecondary">
-              {data.title}
+              {title}
               </Typography>
               <Typography  variant="p" component="p">
-              {data.body}             
+              {body}             
             </Typography>
           </CardContent>
 
@@ -51,7 +52,7 @@ const Details = ({data,button}) => {
                 {button && <a style={{textDecoration:"none"}} href={`detailsinfo/${data.id}`}><Button variant="contained" color="secondary" size="small">Know Details</Button> </a>   }
             </div>             
           </CardActions>
-          
+
         </Card>
       </Grid>
     </Grid>

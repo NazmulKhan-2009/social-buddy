@@ -1,0 +1,13 @@
+.hitbtn{
+  color:#0DBA9A;
+  cursor:pointer;
+}
+
+.thumb-icon:hover,
+.fav-icon:hover,
+.thumbdown-icon:hover,
+.com-icon:hover
+{
+  color:tomato;
+  
+}
